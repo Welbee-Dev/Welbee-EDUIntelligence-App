@@ -1,0 +1,1052 @@
+@import 'Colors';
+//@import 'Fonts.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+  background-color: $mainbg;
+  //font-family: 'Avenir LT Pro';
+  font-family: 'Inter', sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+}
+@mixin container {
+  background-color: $white !important;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05) !important;
+  padding: 1.5rem;
+}
+@mixin general-button{
+  background-color: $pink !important;
+  border-radius: 0 !important;
+  color: $white !important;
+  font-size: 0.875rem !important;
+  text-transform: none !important;
+  box-shadow: none !important;
+  padding: 6px 25px !important;  
+}
+
+.next-button {
+  @include general-button;
+  border: 1px solid $pink !important;
+}
+
+.login-button {
+  @include general-button;
+  padding: 0.625rem 0 !important;
+  font-size: 1rem !important;
+}
+
+// .login-button-lock {
+//   padding: 0.625rem 0 !important;
+//   font-size: 1rem !important;
+//   margin-top: -1rem !important;
+//   position: relative;
+//   top: 45%;
+//   left: 50%;
+//   margin-left: 3.125rem;
+
+// }
+
+.prev-button {
+  @include general-button;
+  background-color: $white !important;
+  border: 1px solid $pink !important;
+  color: $pink !important;
+}
+
+.pink-link {
+  color: $pink !important;
+  text-align: right;
+  text-decoration: underline;
+}
+
+.grey-button {
+  @include general-button;
+  background-color: $white !important;
+  border: 1px solid $menu !important;
+  color: $menu !important;
+}
+.header {
+  background-color: $skyblue !important;
+  box-shadow: none !important;
+  padding: 0;
+  min-height: 65px;
+  justify-content: center;
+  .logo img {
+    height: 40px;
+  }
+  .header-middle {
+    margin-left: 50px;
+    Button {
+      text-transform: none;
+      font-weight: 500;
+      color: $text;
+      margin-right: 20px;
+    }
+  }
+}
+.main-container {
+  padding-top: 65px;
+}
+.app-container {
+  @include container;
+}
+.body-container {
+  @include container;
+  margin: 1.5rem 0;
+  border: 1px solid $border;
+}
+.active-link {
+  color: 'red' !important;
+  text-decoration: none;
+}
+label span,
+label {
+  font-weight: 500 !important;
+  font-size: 14px !important;
+}
+.meta-text {
+  a {
+    color: $menu;
+  }
+  hr {
+    border-color: $menu;
+  }
+}
+.audience-selection {
+  button {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: none;
+    color: $text;
+    margin-bottom: 15px;
+    border-radius: 0;
+    border: 1px solid $border !important;
+    padding: 11px 18px;
+    width: 100%;
+  }
+  .staff-survey {
+    :hover,
+    .Mui-selected {
+      background-color: $orange !important;
+      border-color: $orange !important;
+      color: $white;
+      svg path {
+        fill: $white;
+      }
+    }
+  }
+  .student-survey {
+    :hover,
+    .Mui-selected {
+      background-color: $skyblue !important;
+      border-color: $skyblue !important;
+      color: $white;
+      svg path {
+        fill: $white;
+      }
+    }
+  }
+  .parent-survey {
+    :hover,
+    .Mui-selected {
+      background-color: $purple !important;
+      border-color: $purple !important;
+      color: $white;
+      svg path {
+        fill: $white;
+      }
+    }
+  }
+}
+
+.survey-selection {
+  margin: 10px !important;
+  border: 1px solid $border !important;
+  border-radius: 0 !important;
+  display: flex !important;
+  flex-direction: column;
+  width: 240px;
+  min-height: 270px;
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: none;
+    color: $text;
+    margin: 0 0 8px 0;
+  }
+  h5 {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: none;
+    color: $menu;
+    margin: 0;
+  }
+  svg {
+    margin: 0 0 20px 0;
+    height: 45px;
+    width: 45px;
+    font-size: 100%;
+  }
+}
+.main-menu {
+  display: flex;
+  flex-direction: row;
+  column-gap: 15px;
+  button {
+    color: $white;
+    border-radius: 0;
+    padding: 10px 16px;
+  }
+  button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+.survey-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: $white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  .header-tags {
+    font-size: 13px;
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 2px 6px 3px;
+  }
+}
+.grow {
+  flex-grow: 1;
+}
+.relative {
+  position: relative;
+}
+.question-panels {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 100%;
+
+  //Side Navigation
+  .side-nav {
+    height: calc(100vh - 65px);
+    background-color: $white;
+    border-right: 1px solid $border;
+    button {
+      display: flex;
+      flex-direction: column;
+      border-radius: 0;
+      border-right: 0;
+      border-left: 0;
+      padding: 10px 0;
+      width: 70px;
+      span {
+        font-size: 12px;
+        text-transform: none;
+        line-height: 12px;
+        padding-top: 3px;
+      }
+    }
+    .MuiToggleButton-standard.Mui-selected {
+      background-color: $menuhoverbg !important;
+      color: $purple !important;
+      border-top: 1px solid $border;
+    }
+    .MuiToggleButton-standard {
+      color: $menu !important;
+    }
+  }
+
+  //Quetions List and Create Questions
+  .question-canvas {
+    height: calc(100vh - 65px);
+    max-width: 640px;
+    min-width: 570px;
+    width: 40%;
+    background-color: $white;
+    border-right: 1px solid $border;
+    overflow-y: auto;
+    h3.sub-heading {
+      text-align: center;
+      padding: 30px 0;
+    }
+    .question-audience-tabs {
+      background-color: $lightgrey;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+    }
+    .questions {
+      background-color: $lightgrey;
+      border-bottom: 1px solid $border;
+      padding: 20px;
+    }
+    .icon-delete {
+      font-size: 20px;
+    }
+    .survey-name-txt {
+      .MuiOutlinedInput-root {
+        border-radius: 0;
+        font-size: 14px;
+      }
+      .Mui-focused fieldset {
+        border-color: $skyblue !important;
+        border-width: 1px;
+      }
+      :hover fieldset {
+        border-color: $skyblue !important;
+      }
+    }
+  }
+
+  //Qustion Preview
+  .question-preview {
+    height: 100%;
+    .preview-tabs {
+      background-color: $white;
+      border-bottom: 1px solid $border;
+      padding: 0 24px;
+      min-height: 48px;
+      .MuiTabs-centered {
+        justify-content: end;
+      }
+    }
+    .preview {
+      overflow: auto;
+      height: calc(100vh - 115px);
+      .question-box {
+        margin: 0 auto;
+        max-width: 550px;
+        min-width: 500px;
+        width: fit-content;
+        text-align: center;
+        margin-bottom: 50px;
+        margin-top: 80px;
+        h1 {
+          margin-bottom: 15px;
+        }
+        p {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+.add-option {
+  color: $orange !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+}
+.add-option.Mui-disabled {
+  color: $menu !important;
+}
+
+.options-panel {
+  background-color: $greybox;
+  border: 1px solid $border;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+.followup-switch {
+  margin: 10px 0 0 5px;
+}
+.questions-list {
+  border-bottom: 1px solid $border;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  .question-no {
+    font-size: 18px;
+    font-weight: bold;
+    color: $menu;
+    line-height: 2;
+  }
+  .question-txt {
+    font-size: 14px;
+    color: $text;
+  }
+  hr {
+    border-color: $menu;
+  }
+}
+.questions-list:hover {
+  background-color: $lightgrey;
+  cursor: pointer;
+}
+.summary-container {
+  background-color: $greybox;
+  border: 1px solid $border;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  line-height: 24px;
+}
+.schedule-toggle-btn {
+  .MuiToggleButton-standard.Mui-selected {
+    background-color: $skyblue !important;
+    color: $white !important;
+  }
+  .MuiToggleButton-standard {
+    border-radius: 0 !important;
+    color: $text !important;
+  }
+}
+.radio-button-container {
+  .MuiRadioGroup-root {
+    label.MuiFormControlLabel-root > label {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+.nothing-to-see {
+  h1 {
+    font-size: 22px;
+    font-weight: 300;
+    margin: 12px 0;
+  }
+  span {
+    color: $pink;
+    font-size: 20px;
+    font-weight: 300;
+  }
+}
+
+.custom-tabs {
+  .MuiTab-textColorPrimary {
+    color: $menu !important;
+    opacity: 1 !important;
+    max-width: 150px !important;
+    min-width: 50px !important;
+    font-weight: bold !important;
+    padding: 0 !important;
+    margin: 0 20px !important;
+  }
+  .MuiTabs-indicator {
+    max-width: 80px;
+    width: 100%;
+    background-color: $green !important;
+  }
+  .MuiTab-textColorPrimary.Mui-selected {
+    color: $green !important;
+  }
+}
+.invite {
+  border-bottom: 1px solid $border;
+  button:first-child {
+    margin-left: 0 !important;
+  }
+}
+.question-type-dropdown {
+  .MuiMenu-paper {
+    border-radius: 0;
+    border: 1px solid $border;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.13);
+  }
+  ul {
+    min-width: 250px;
+    width: 100%;
+    border-radius: 0 !important;
+    li {
+      font-size: 14px;
+      color: $text;
+      line-height: 1.85;
+      svg {
+        margin-right: 12px;
+      }
+    }
+    li:hover {
+      background-color: $menuhoverbg;
+    }
+  }
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 100%;
+  //left container
+  .left-container {
+    padding: 0 15px;
+    height: calc(100% - 65px);
+    width: 270px;
+    left: 0;
+    position: fixed;
+    z-index: 1000;
+    background-color: $white;
+    border-right: 1px solid $border;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    .template-tags {
+      flex-grow: 1;
+      overflow: auto;
+    }
+    .template-back-btn {
+      flex-shrink: 0;
+      padding: 15px 0;
+      text-align: center;
+    }
+    .school-logo {
+      padding: 30px 0;
+      text-align: center;
+      img {
+        width: 100%;
+        height: 50px;
+      }
+    }
+    .all-surveys {
+      // padding: 0 14px;
+      ul {
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 14px 10px;
+      }
+      li:hover {
+        background-color: $menuhoverbg;
+        cursor: pointer;
+        font-weight: 600;
+      }
+    }
+  }
+  //template body container
+  .right-container {
+    height: 100%;
+    width: calc(100% - 300px);
+    padding-left: 300px;
+    .search-template {
+      background-color: #f8fdff;
+      border-bottom: 1px solid $border;
+      text-align: center;
+      padding: 50px 0;
+      margin-bottom: 25px;
+    }
+    .template-list {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        padding: 15px;
+        flex-shrink: 0;
+        .template {
+          background-color: $white;
+          border: 1px solid $border;
+          display: block;
+          width: 250px;
+          .pink {
+            background-color: $pink;
+          }
+          .yellow {
+            background-color: $yellow;
+          }
+          .green {
+            background-color: $green;
+          }
+          .purple {
+            background-color: $purple;
+          }
+          .orange {
+            background-color: $orange;
+          }
+          .blue {
+            background-color: $skyblue;
+          }
+          .template-header {
+            margin: 6px;
+            overflow: hidden;
+            .template-width {
+              width: 220px;
+              height: 200px;
+            }
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+            .template-overlay {
+              background: rgba(0, 0, 0, 0.7);
+              height: 100%;
+              opacity: 0;
+              position: absolute;
+              top: 0;
+              -webkit-transition: opacity 0.3s;
+              transition: opacity 0.3s;
+              width: 100%;
+              z-index: 10;
+              justify-content: center;
+              align-items: center;
+              display: flex;
+              .use-template-btn {
+                background-color: $orange;
+                border-radius: 0;
+                text-transform: none;
+              }
+              .preview-btn {
+                background-color: $white;
+                border-radius: 0;
+                text-transform: none;
+                color: $text;
+              }
+            }
+          }
+          .template-header:hover .template-overlay {
+            opacity: 1;
+          }
+          .inner-padding {
+            padding: 10px;
+          }
+          .template-content {
+            //height: calc(30px + 3em);
+            line-height: 1.5;
+            padding: 15px;
+          }
+          .template-footer {
+            padding: 15px;
+            border-top: 1px solid $border;
+          }
+        }
+      }
+    }
+    .survey-dashboard {
+      padding: 24px;
+      .surveys {
+        padding: 18px;
+        background-color: $white;
+        border: 1px solid $border;
+        min-height: 230px;
+        max-height: 250px;
+        position: relative;
+        button {
+          padding: 0;
+        }
+        .survey-bottom {
+          position: absolute;
+          bottom: 18px;
+        }
+        .MuiChip-root {
+          border-radius: 4px;
+        }
+        .audience-chip {
+          background-color: $purple;
+          color: $white;
+        }
+        .tag-chip {
+          color: $skyblue;
+          border-color: $skyblue;
+        }
+      }
+      .surveyname {
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .survey-date {
+        color: $menu;
+      }
+    }
+  }
+}
+
+.template-preview-container {
+  .left-container {
+    height: 100vh;
+    .template-pname {
+      font-size: 22px;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+    }
+    .template-back-btn {
+      display: flex;
+      row-gap: 10px;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .right-container {
+    .search-template {
+      padding: 15px 0;
+      margin-bottom: 0;
+      h3 {
+        font-weight: bold;
+      }
+    }
+    .template-preview {
+      .question-type-slides {
+        position: relative;
+        .slides {
+          position: absolute;
+          width: 100%;
+          height: calc(100vh - 50px);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .question-slider {
+          position: absolute;
+          width: 40%;
+          text-align: center;
+          margin: auto;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        .slider-btn {
+          position: relative;
+          .prev-btn svg,
+          .next-btn svg {
+            width: 36px;
+            height: 36px;
+            background-color: $skyblue;
+            color: $white;
+            border-radius: 100%;
+          }
+          .prev-btn {
+            position: absolute;
+            left: 5px;
+          }
+          .next-btn {
+            position: absolute;
+            right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+.options-menu li {
+  font-size: 14px !important;
+  color: $text;
+}
+
+.question-bank-container {
+  background-color: $greybox;
+  border: 1px solid $border;
+  margin-top: 20px;
+  .bank-questions {
+    height: 350px;
+    overflow-y: auto;
+    ul.bank-question-box {
+      width: 48%;
+      list-style-type: none;
+      //padding: 0;
+      margin: 0;
+      float: left;
+      li.questions {
+        display: block;
+        margin-bottom: 6px;
+        background-color: $white;
+        border: 1px solid $border;
+        padding: 15px;
+        button {
+          padding: 0;
+        }
+        .show-hide {
+          margin: 8px 0 0 0;
+          button {
+            font-size: 12px;
+            text-transform: none;
+            color: $orange;
+            span {
+              margin-right: 0;
+            }
+          }
+          .answers {
+            color: $menu;
+            font-size: 12px;
+            margin: 5px 0;
+            list-style-type: disc;
+            li {
+              padding: 0 0 3px 0;
+            }
+          }
+        }
+        .MuiChip-root {
+          border-radius: 4px;
+          margin-top: 10px;
+          background-color: $purple;
+          color: $white;
+          font-size: 12px;
+        }
+      }
+    }
+    .left-column {
+      padding: 10px 3px 0 12px;
+    }
+    .right-column {
+      padding: 10px 12px 0 3px;
+    }
+  }
+  .total-questions {
+    padding: 12px 12px 0;
+    text-align: right;
+    color: $menu;
+    font-weight: 500;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .selected-questions-container {
+    position: relative;
+    height: 377px;
+    overflow-y: auto;
+    .selected-questions {
+      background-color: $white;
+      border: 1px solid $border;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 10px;
+      margin: 8px 0;
+      button {
+        padding: 0;
+      }
+    }
+    .selected-questions-button {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  .MuiAlert-root {
+    margin: 20px 12px 0 12px;
+  }
+}
+.search-txt {
+  div {
+    border-radius: 0;
+    background-color: $white;
+  }
+  input {
+    height: 18px;
+    font-size: 14px;
+  }
+  fieldset {
+    border-bottom: 1px solid $border;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+  }
+  .Mui-focused fieldset,
+  :hover fieldset {
+    border-color: $border !important;
+    border-width: 1px !important;
+  }
+}
+.MuiTooltip-tooltip {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  color: $white;
+  font-size: 12px;
+}
+.MuiTooltip-arrow {
+  color: rgba(0, 0, 0, 0.8) !important;
+}
+.MuiTooltip-popper {
+  margin-top: 0;
+}
+
+//Welcome
+.welcome {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 30px;
+  h1 {
+    font-size: 35px;
+  }
+  p {
+    font-size: 16px;
+    color: $menu;
+    text-align: center;
+    line-height: 26px;
+  }
+}
+.survey-preview {
+  .question-preview {
+    height: 100%;
+    .preview {
+      overflow: auto;
+      height: calc(100vh - 69px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .question-box {
+        margin: 0 auto;
+        max-width: 550px;
+        min-width: 500px;
+        width: fit-content;
+        text-align: center;
+      }
+      .question-slider {
+        position: fixed;
+      }
+    }
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      .question-nav {
+        background: $white;
+        padding: 15px 25px;
+      }
+    }
+  }
+}
+
+.participants {
+  .participant-filter-box {
+    background-color: $lightgrey;
+    border: 1px solid $border;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  .participant-card {
+    border: 1px solid $border;
+    padding: 15px;
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      padding-bottom: 5px;
+    }
+    .total-participant {
+      padding-bottom: 15px;
+      span {
+        font-weight: bold;
+        font-size: 20px;
+      }
+    }
+    .show-participant {
+      font-size: 13px;
+      color: $orange;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  .filter-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 8px;
+      background-color: $white;
+      padding: 8px;
+      margin-bottom: 8px;
+      align-items: center;
+    }
+  }
+}
+.participant-filter {
+  .MuiOutlinedInput-root {
+    border-radius: 0;
+    font-size: 14px;
+    background-color: $white;
+  }
+  .Mui-focused fieldset {
+    border-color: $skyblue !important;
+    border-width: 1px;
+  }
+  :hover fieldset {
+    border-color: $skyblue !important;
+  }
+  .MuiFormControlLabel-root {
+    margin-left: 0;
+  }
+}
+.login-main {
+  position: relative;
+  background: $purple;
+  color: $white;
+  text-align: center;
+  height: 100vh;
+  //border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+      font-weight: 600;
+
+      span {
+          color: $yellow;
+      }
+  }
+
+  p {
+      font-size: 0.875rem;
+      line-height: 1.6;
+  }
+
+  .login-symbol {
+      position: absolute;
+      bottom: 1.875rem;
+      left: 0;
+  }
+}
+
+.login-container{
+  justify-content: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .login-logo{
+      margin-bottom: 0;
+      img{
+          width: auto;
+          height: 3.75rem;
+      }
+  }
+  .login{      
+      h1 {
+        font-size: 22px;
+        font-weight: 700;
+      }
+      p{
+          margin-top: 0.313rem !important;
+          margin-bottom: 0.938rem !important;
+          color: #6d6d6d;
+      }
+  }  
+}
+.link {
+  color: $pink;
+  cursor: pointer;
+}

@@ -1,0 +1,27 @@
+const questionResponseTemplate = {
+  questionId: 0,
+  value1: null,
+  value2: null,
+  value3: null,
+  value4: null,
+  value5: null,
+  value6: null,
+  value7: null,
+  value8: null,
+  value9: null,
+  value10: null,
+  followupComment: null,
+  comment: null,
+  numValue1: null,
+  numValue2: null,
+  numValue3: null,
+  numValue4: null,
+  numValue5: null,
+  numValue6: null,
+  numValue7: null,
+  numValue8: null,
+  numValue9: null,
+  numValue10: null,
+}
+
+module.exports = questionResponseTemplate
