@@ -16,10 +16,14 @@ import SurveyParticipants from '../views/SurveyPanel/SurveyParticipants/index.js
 import ResultsLayout from '../components/layouts/ResultsLayout/index.jsx'
 import Comments from '../views/ResultsPanel/Comments/index.jsx'
 import Login from '../views/Account/Login.jsx'
+import EDUHome from '../views/EDUHome/EDUHome.jsx'
+import EDUDashboard from '../views/EDUDashboard/EDUDashboard.jsx'
 import ParticipantReply from '../views/ResultsPanel/Comments/ParticipantReply.jsx'
 import Questions from '../views/SuperAdmin/Questions/index.jsx'
 import QuestionTags from '../views/SuperAdmin/Questions/QuestionTags.jsx'
 import Redirect from '../views/SuperAdmin/Redirect.jsx'
+import { Home } from '@mui/icons-material'
+
 
 export default function AppRoutes() {
   const AuthenticatedRoutes = route => {
@@ -84,6 +88,8 @@ export default function AppRoutes() {
       ],
     },
     {path: paths.login, element: <Login />},
+    {path: paths.EDUHome, element: <EDUHome />},
+    {path: paths.EDUDashboard, element: <EDUDashboard />},
     {path: paths.surveyView, element: <SurveyView />},
     {path: paths.participantsReply, element: <ParticipantReply />},
     {path: paths.superAdminRedirect, element: <Redirect />},

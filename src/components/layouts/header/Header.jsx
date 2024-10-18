@@ -97,15 +97,18 @@ export default function Header() {
 
           {/* Desktop Menu */}
           <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
+          <div className="header-middle">
+              <Button style={{color: 'white'}} onClick={e => navigate(paths.EDUHome)}>HOME</Button>
+            </div>
             <div className="header-middle">
-              <Button style={{color: 'white'}}>SURVEYS</Button>
+              <Button style={{color: 'white'}} onClick={e => navigate(paths.EDUDashboard)}>SURVEYS</Button>
             </div>
             <div className="header-middle">
               <Button
                 style={{color: 'white'}}
-                onClick={e => navigate(paths.resultsDash)}
+                onClick={e => navigate(paths.dashboard)}
               >
-                EDU INTELLIGENCE
+               GET INSIGHTS
               </Button>
             </div>
           </Box>

@@ -1,5 +1,7 @@
 export default {
   dashboard: '/',
+  EDUHome: '/EDUHome',
+  EDUDashboard: '/EDUDashboard',
   createSurvey: '/survey-panel',
   questionPanel: '/survey-panel/questions/:token',
   surveyTemplatesPanel: '/survey-templates-panel/:audience/:anonimous/:shared',

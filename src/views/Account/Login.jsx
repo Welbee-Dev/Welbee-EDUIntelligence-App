@@ -96,7 +96,7 @@ export default function Login() {
         <Grid item xs={12} lg={5} md={5} display={{xs: 'none', lg: 'block'}}>
           <div className="login-main">
             <h1>
-              Welcome to <span>Welbee Custom</span>
+              Welcome to <span>Welbee EDU-Intelligence</span>
             </h1>
             <p>
               Systematically measure and improve staff wellbeing

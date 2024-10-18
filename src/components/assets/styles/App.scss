@@ -81,7 +81,7 @@ h6 {
   color: $menu !important;
 }
 .header {
-  background-color: $skyblue !important;
+  background-color: $purple !important;
   box-shadow: none !important;
   padding: 0;
   min-height: 65px;
@@ -485,12 +485,53 @@ label {
   flex-direction: row;
   position: relative;
   height: 100%;
-  //left container
+  .main-Box {  
+    height: calc(100% - 65px);
+    width: 100%;
+    left: 0;
+    position: fixed;
+    z-index: 1000;
+    // background-color: $white;
+    border-right: 1px solid $border;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    .survey-dashboard {      
+      height: 100%;     
+      .content{
+        width: 714px;
+        height: 292px;        
+        border: 1px 0px 0px 0px;
+        opacity: 0px;
+        padding: 238px 0 0 443px;
+      }
+      .headlabel {
+        width: 100%;
+        height: 20px;
+        top: 238px;
+        left: 443px;
+        gap: 0px;
+        opacity: 0px;   
+        font-family: Inter;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 16px;
+        text-align: left;
+        color:#E84F6B;
+      }
+      .surveyname {
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .survey-date {
+        color: $menu;
+      }
+    }
+  }
   .left-container {
     padding: 0 15px;
     height: calc(100% - 65px);
-    width: 270px;
-    left: 0;
+    width: 270px;   
     position: fixed;
     z-index: 1000;
     background-color: $white;
