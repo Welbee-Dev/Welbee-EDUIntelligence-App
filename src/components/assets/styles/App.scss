@@ -1138,3 +1138,36 @@ label {
     }
   }
 }
+
+.chat-box{
+  .MuiBackdrop-root{
+    opacity: 0 !important;
+  }
+  .MuiPaper-root{    
+    border: 1px solid $border !important;
+    box-shadow: none !important;
+    border-radius: 0px;
+    min-width: calc(50vw - 20px) !important;
+    height: 70vh;
+    position: absolute;
+    right: 0px;
+    bottom: 50px;
+    overflow-y: auto;
+    padding: 20px;
+  }
+  .chat-textfield{
+    position: absolute;
+    bottom: 20px;
+    width: calc(100% - 40px);    
+    .send-btn{
+      background: $pink;
+      border-radius: 4px;
+      svg{
+        color: $white;
+      }
+    } 
+    .MuiOutlinedInput-root{
+      padding-right: 10px;
+    }   
+  }
+}
