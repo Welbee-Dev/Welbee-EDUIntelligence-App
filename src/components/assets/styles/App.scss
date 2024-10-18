@@ -20,9 +20,16 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  font-weight: normal;
+h6 {  
   margin: 0;
+}
+h1{
+  font-weight: bold;
+  font-size: 22px;
+}
+h2{
+  font-size: 18px;
+  font-weight: 600;
 }
 @mixin container {
   background-color: $white !important;
@@ -1090,4 +1097,44 @@ label {
 .link {
   color: $pink;
   cursor: pointer;
+}
+
+//Edu Intelligence CSS
+.insights-container{      
+  .insight-content{    
+    height: calc(100vh - 65px);
+    display: flex;
+    align-items: center;
+    h1{
+      font-size: 28px;
+      font-weight: bold;
+      color: $pink;
+    }
+    h2{
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 5px;
+    }
+    .body-container{
+      h3{
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 12px;
+      }
+      p{
+        color: $menu;
+      }    
+    }  
+  }
+  .audience-chip {
+    background-color: $green;
+    color: $white;
+    border-radius: 4px;
+  }
+  .launch-date{
+    margin-bottom: 6px;
+    span{
+      font-weight: 600;
+    }
+  }
 }
