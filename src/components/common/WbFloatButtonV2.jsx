@@ -9,6 +9,7 @@ import '../assets/styles/chatbot.scss'
 import $ from 'jquery';
 // import axios from 'axios';
  import EDUIntellApi from '../../services/api/eduIntell/eduIntellAPI'
+ import {welbeeicon} from '../assets/images/index'
 
 const fabStyle = {
   position: 'absolute',
@@ -78,11 +79,11 @@ function insertMessage() {
         if ($('.message-input').val() !== '') {
           return false;
         }
-        $('<div class="message loading new"><figure class="avatar"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80.jpg" /></figure><span></span></div>').appendTo($('.messages-content'));
+        $('<div class="message loading new"><figure class="avatar"><img src=' + [welbeeicon] + '/></figure><span></span></div>').appendTo($('.messages-content'));
         updateScrollbar();
         setTimeout(function() {
           $('.message.loading').remove();
-          $('<div class="message new"><figure class="avatar"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80.jpg" /></figure>' + botResponse + '</div>').appendTo($('.messages-content')).addClass('new');
+          $('<div class="message new"><figure class="avatar"><img src=' + [welbeeicon] + '/></figure>' + botResponse + '</div>').appendTo($('.messages-content')).addClass('new');
           setDate();
           updateScrollbar();
           i++;
@@ -124,11 +125,11 @@ function fakeMessage() {
   if ($('.message-input').val() !== '') {
     return false;
   }
-  $('<div class="message loading new"><figure class="avatar"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80.jpg" /></figure><span></span></div>').appendTo($('.messages-content'));
+  $('<div class="message loading new"><figure class="avatar"><img src=' + [welbeeicon] + '/></figure><span></span></div>').appendTo($('.messages-content'));
   updateScrollbar();
   setTimeout(function() {
     $('.message.loading').remove();
-    $('<div class="message new"><figure class="avatar"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80.jpg" /></figure>' + Fake[i] + '</div>').appendTo($('.messages-content')).addClass('new');
+    $('<div class="message new"><figure class="avatar"><img src=' + [welbeeicon] + '/></figure>' + Fake[i] + '</div>').appendTo($('.messages-content')).addClass('new');
     setDate();
     updateScrollbar();
     i++;
@@ -142,7 +143,7 @@ function fakeMessage() {
           <h1>Insights ChatBot</h1>
           <h2>Welbee AI</h2>
           <figure className="avatar">
-            <img alt='' src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80.jpg" /></figure>
+            <img src={welbeeicon} alt="Welbee"/></figure>
         </div>
         <div className="messages">
           <div className="messages-content"></div>
@@ -151,8 +152,7 @@ function fakeMessage() {
           <textarea type="text" className="message-input" placeholder="Type message..."></textarea>
           <button type="submit" className="message-submit" onClick={handleSendMessage} > Send</button>
         </div>
-      </div>
-      <div className="bg"></div>
+      </div>      
     </Dialog>
   );
 }
