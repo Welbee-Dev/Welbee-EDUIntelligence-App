@@ -1170,4 +1170,54 @@ label {
       padding-right: 10px;
     }   
   }
+
+
+
+  .chatbot {
+    width: '300px';
+    background-color: '#f0f0f0';
+    border: '1px solid #ccc';
+    border-radius: '5px';
+    margin: '0 auto';
+    padding: '10px';
+  }
+  .chatbox {
+    display: 'flex';
+    flex-direction: 'column';
+  }
+  .messages {
+    max-height: '300px';
+    overflow-y: 'scroll';
+  }
+  .message {
+    margin-bottom: '10px';
+  }
+  .botMessage {
+    background-color: '#007bff';
+    color: 'white';
+    padding: '5px 10px';
+    border-radius: '5px';
+    margin-left: 'auto';
+  }
+  .userMessage {
+    background-color: '#e0e0e0';
+    padding: '5px 10px';
+    border-radius: '5px';
+    margin-right: 'auto';
+  }
+  .chatbot input {
+    width: '100%';
+    padding: '5px';
+    border: '1px solid #ccc';
+    border-radius: '5px';
+    margin-bottom: '10px';
+  }
+ .chatbot button {
+    background-color: '#007bff';
+    color: 'white';
+    border: 'none';
+    padding: '10px 20px';
+    border-radius: '5px';
+    cursor: 'pointer';
+  }
 }

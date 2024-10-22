@@ -2,7 +2,10 @@ import React from 'react'
 import {Container, Grid, Stack, Chip, MenuItem} from '@mui/material'
 import Header from '../../components/layouts/header/Header'
 import WbTextField from '../../components/common/WbTextField'
-import WbFloatButton from '../../components/common/WbFloatButton'
+// import WbFloatButton from '../../components/common/WbFloatButton'
+import WbFloatButtonV2 from '../../components/common/WbFloatButtonV2'
+
+// import Chatbot from '../../Chatbot';
 
 export default function EDUDashboard() {  
   return  (
@@ -57,7 +60,13 @@ export default function EDUDashboard() {
           </Grid>
         </Container>        
       </div>
-      <WbFloatButton />
+      {/* <div className="App">
+        <header className="App-header">
+          <h1>AI Chatbot</h1>
+          <Chatbot />
+        </header>
+      </div> */}
+      <WbFloatButtonV2 />
     </>
   )
 }

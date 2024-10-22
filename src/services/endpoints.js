@@ -11,6 +11,8 @@ const survey = {
     `/survey/getSurveyForResults?schoolId=${schoolId}&matId=${matId}`,
 }
 
+
+
 const scheduler = {
   canPublish: () => `/Scheduler/CanPublish`,
   publish: () => `/Scheduler/Publish`,
@@ -84,6 +86,10 @@ const comments = {
   GetRepliesByCommentId: id => `/SurveyComments/GetRepliesByCommentId?id=${id}`,
 }
 
+const eduIntell = {  
+  GetEDUIntell: (userId, userQuery) => `/EDUIntell/GetEDUIntell?userId=${userId}&userQuery=${userQuery}`,
+}
+
 const tags = {
   get: () => `/tags`,
 }
@@ -96,6 +102,7 @@ export {
   questions,
   scheduler,
   survey,
+  eduIntell,
   surveyQuestion,
   surveytag,
   surveyTemplates,

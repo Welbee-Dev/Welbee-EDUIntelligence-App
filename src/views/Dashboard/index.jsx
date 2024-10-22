@@ -28,7 +28,7 @@ export default function Dashboard() {
     setLoading(true)
     surveysApi
       .getAll(customer.id, customer.customerType, 50)
-      .then(res => {
+      .then(res => {       
         setSurveys(res.sort((a, b) => a.name.localeCompare(b.name)))
       })
       .catch(err => {})
