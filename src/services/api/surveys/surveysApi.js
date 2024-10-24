@@ -25,6 +25,13 @@ export default class surveysApi {
       data: token,
     })
   }
+  static async getBySurveyId(surveyId) {
+    return request({
+      url: survey.getBySurveyId(),
+      method: 'POST',
+      data: surveyId,
+    })
+  }
   static async getAll(cId, cType, limit) {
     return request({
       url: survey.getAll(cId, cType, limit),

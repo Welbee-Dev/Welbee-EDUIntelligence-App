@@ -50,7 +50,7 @@ export default function WbTextField({label, id, ...props}) {
       id={id}
       variant="filled"
       fullWidth
-      size="small"
+      size="small"      
       {...props}
     />
   )

@@ -69,7 +69,8 @@ export default function Login() {
             res.data.data.MatGroupId == 0 || res.data.data.MatGroupId === null
               ? false
               : true,
-          email: res.data.data.userInfo.Email,
+            email: res.data.data.userInfo.Email,
+            Id: res.data.data.userInfo.Id,
         }
 
         debugger
@@ -82,7 +83,7 @@ export default function Login() {
         // dispatch(updateUser(user))
 
         setLockScreen(false)
-        navigate('/')
+        navigate('/EDUDashboard')
       })
       .catch(err => {
         console.log(err)
@@ -96,7 +97,7 @@ export default function Login() {
         <Grid item xs={12} lg={5} md={5} display={{xs: 'none', lg: 'block'}}>
           <div className="login-main">
             <h1>
-              Welcome to <span>Welbee EDU-Intelligence</span>
+              Welcome to <span>Welbee Intelligent Ed</span>
             </h1>
             <p>
               Systematically measure and improve staff wellbeing

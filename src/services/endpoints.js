@@ -3,6 +3,7 @@
 const survey = {
   surveys: () => `/survey`,
   get: () => `/survey/GetByToken`,
+  getBySurveyId: () => `/survey/GetBySurveyId`,
   getAll: (cId, cType, limit) =>
     `/survey/GetAll?customerId=${cId}&customerType=${cType}&limit=${limit}`,
   submit: () => `/survey/SubmitSurvey`,
@@ -87,7 +88,7 @@ const comments = {
 }
 
 const eduIntell = {  
-  GetEDUIntell: (userId, userQuery) => `/EDUIntell/GetEDUIntell?userId=${userId}&userQuery=${userQuery}`,
+  GetEDUIntell: (surveyId,userId, userQuery,requestType) => `/EDUIntell/GetEDUIntell?surveyId=${surveyId}&userId=${userId}&userQuery=${userQuery}&requestType=${requestType}`,
 }
 
 const tags = {
